@@ -79,7 +79,8 @@ class MessagesController extends Controller
      */
     public function destroy($id)
     {
-        //$id = $request->input('id');
+
+
         return Message::findOrfail($id)->delete();
         return redirect()->route('api/messages/index');
     }
